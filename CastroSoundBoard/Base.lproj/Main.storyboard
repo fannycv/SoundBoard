@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023.6641221374045" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1001" y="4"/>
         </scene>
         <!--Sound View Controller-->
         <scene sceneID="1iA-aH-W7F">
@@ -75,19 +75,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOMBRE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgN-pI-w7F">
-                                <rect key="frame" x="20" y="265" width="353" height="21"/>
+                                <rect key="frame" x="20" y="311" width="353" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nombre de Audio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LXD-bj-FBl">
-                                <rect key="frame" x="20" y="306" width="353" height="28.666666666666686"/>
+                                <rect key="frame" x="20" y="352" width="353" height="28.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXY-AM-NKp">
-                                <rect key="frame" x="146" y="354.66666666666669" width="101" height="35"/>
+                                <rect key="frame" x="146" y="400.66666666666669" width="101" height="35"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="AGREGAR">
@@ -97,37 +97,54 @@
                                     <action selector="agregarTapped:" destination="opH-Mo-enO" eventType="touchUpInside" id="kJj-YF-00C"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThZ-fU-OTx">
+                                <rect key="frame" x="279" y="135" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.45419669579999999" green="0.078690855939999999" blue="0.80987185240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vfh-RJ-XPA">
+                                <rect key="frame" x="133" y="251" width="127" height="31"/>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fXi-Xf-OYA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Exa-DV-VTk" firstAttribute="centerX" secondItem="fXi-Xf-OYA" secondAttribute="centerX" id="0hM-Sv-E04"/>
                             <constraint firstItem="fXi-Xf-OYA" firstAttribute="trailing" secondItem="lgN-pI-w7F" secondAttribute="trailing" constant="20" id="281-ue-dgM"/>
-                            <constraint firstItem="lgN-pI-w7F" firstAttribute="top" secondItem="Exa-DV-VTk" secondAttribute="bottom" constant="30" id="4RK-kY-hlS"/>
+                            <constraint firstItem="ThZ-fU-OTx" firstAttribute="leading" secondItem="fIh-56-li1" secondAttribute="trailing" constant="23" id="4xf-C8-xch"/>
                             <constraint firstItem="fXi-Xf-OYA" firstAttribute="trailing" secondItem="LXD-bj-FBl" secondAttribute="trailing" constant="20" id="93M-kf-pRQ"/>
+                            <constraint firstItem="YXY-AM-NKp" firstAttribute="top" secondItem="LXD-bj-FBl" secondAttribute="bottom" constant="20" id="DGJ-b3-1Fi"/>
                             <constraint firstItem="lgN-pI-w7F" firstAttribute="leading" secondItem="fXi-Xf-OYA" secondAttribute="leading" constant="20" id="Edk-GE-oGC"/>
+                            <constraint firstItem="fXi-Xf-OYA" firstAttribute="trailing" secondItem="vfh-RJ-XPA" secondAttribute="trailing" constant="135" id="HQz-jk-YZa"/>
+                            <constraint firstItem="vfh-RJ-XPA" firstAttribute="top" secondItem="Exa-DV-VTk" secondAttribute="bottom" constant="16" id="ISa-Pe-CCA"/>
+                            <constraint firstItem="LXD-bj-FBl" firstAttribute="top" secondItem="lgN-pI-w7F" secondAttribute="bottom" constant="20" id="KFR-gR-TkW"/>
                             <constraint firstItem="LXD-bj-FBl" firstAttribute="leading" secondItem="fXi-Xf-OYA" secondAttribute="leading" constant="20" id="MB1-xR-eae"/>
                             <constraint firstItem="LXD-bj-FBl" firstAttribute="centerX" secondItem="fXi-Xf-OYA" secondAttribute="centerX" id="PuP-z6-LPg"/>
                             <constraint firstItem="Exa-DV-VTk" firstAttribute="top" secondItem="fIh-56-li1" secondAttribute="bottom" constant="20" id="R7i-1p-Qo0"/>
                             <constraint firstItem="YXY-AM-NKp" firstAttribute="centerX" secondItem="fXi-Xf-OYA" secondAttribute="centerX" id="SuR-s5-5lJ"/>
                             <constraint firstItem="lgN-pI-w7F" firstAttribute="centerX" secondItem="fXi-Xf-OYA" secondAttribute="centerX" id="XVU-ut-4Dg"/>
-                            <constraint firstItem="YXY-AM-NKp" firstAttribute="top" secondItem="LXD-bj-FBl" secondAttribute="bottom" constant="20" id="erM-7y-GyY"/>
+                            <constraint firstItem="lgN-pI-w7F" firstAttribute="top" secondItem="vfh-RJ-XPA" secondAttribute="bottom" constant="30" id="XaU-qS-rPz"/>
+                            <constraint firstItem="fXi-Xf-OYA" firstAttribute="bottom" secondItem="ThZ-fU-OTx" secondAttribute="bottom" constant="663" id="dDq-3Y-yht"/>
+                            <constraint firstItem="vfh-RJ-XPA" firstAttribute="leading" secondItem="fXi-Xf-OYA" secondAttribute="leading" constant="135" id="eaP-3l-vCB"/>
+                            <constraint firstItem="ThZ-fU-OTx" firstAttribute="top" secondItem="fXi-Xf-OYA" secondAttribute="top" constant="32" id="grK-B0-oR6"/>
                             <constraint firstItem="fIh-56-li1" firstAttribute="centerX" secondItem="fXi-Xf-OYA" secondAttribute="centerX" id="p9O-eK-6xC"/>
-                            <constraint firstItem="LXD-bj-FBl" firstAttribute="top" secondItem="lgN-pI-w7F" secondAttribute="bottom" constant="20" id="wXm-mc-TQv"/>
                             <constraint firstItem="fIh-56-li1" firstAttribute="top" secondItem="fXi-Xf-OYA" secondAttribute="top" constant="20" id="xtb-2Z-6Yy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xP7-9Y-LjH"/>
                     <connections>
                         <outlet property="agregarButton" destination="YXY-AM-NKp" id="nYQ-aX-svD"/>
+                        <outlet property="duracionLabel" destination="ThZ-fU-OTx" id="nel-bn-eAh"/>
                         <outlet property="grabarButton" destination="fIh-56-li1" id="hAq-dH-mZ4"/>
                         <outlet property="nombreTextField" destination="LXD-bj-FBl" id="y54-q7-okq"/>
                         <outlet property="reproducirButton" destination="Exa-DV-VTk" id="msP-5x-n7x"/>
+                        <outlet property="volumenSlider" destination="vfh-RJ-XPA" id="yE0-a5-Kko"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kB4-Sv-4G4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1726" y="4"/>
+            <point key="canvasLocation" x="1725.9541984732823" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="70a-La-8g7">
@@ -145,7 +162,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OLq-aE-zNl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96.946564885496173" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="262" y="4"/>
         </scene>
     </scenes>
     <resources>

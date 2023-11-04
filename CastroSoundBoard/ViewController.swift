@@ -65,11 +65,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cellIdentifier")
         let grabacion = grabaciones[indexPath.row]
         cell.textLabel?.text = grabacion.nombre
+        cell.detailTextLabel?.text = "Duración: \(formattedTime(grabacion.duracion))"
         return cell
     }
-
+    
+    func formattedTime(_ time: TimeInterval) -> String {
+        let seconds = Int(time) % 60
+        let minutes = (Int(time) / 60) % 60
+        let hours = Int(time) / 3600
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
 }
 
